@@ -16,12 +16,12 @@
 
     <p>Input text below.</p>
 
-    <textarea name="input_text" id="input_text" placeholder="Enter text..." cols="30" rows="10"></textarea>
+    <textarea name="input_text" id="input_text" placeholder="Enter text..."></textarea>
     
     <br>
 
     <button id="run" type="button" class="button is-primary" pys-onClick="count" >Count</button>
-    <button id="run" type="button" class="button is-danger" pys-onClick="clear" >Clear</button>
+    <button id="clear" type="button" class="button is-danger" pys-onClick="clear" >Clear</button>
 
     <br>
 
@@ -42,6 +42,5 @@
     def count(*args, **kwargs):
         number = len(input_text.value)
         op.write(number)
-
 
   </py-script>
