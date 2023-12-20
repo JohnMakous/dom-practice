@@ -16,7 +16,7 @@
 
     <p>Input text below.</p>
 
-    <input type="number" id="x1" name="x1" placeholder="x1">
+    <input type="text" id="x1" name="x1" placeholder="x1">
 
     <br>
 
@@ -35,6 +35,9 @@
 
     x1 = Element("x1")
     op = Element("output")
+
+    name = input("Please Enter Your Name: ")
+    print(name)
 
     def clear(*args, **kwargs):
         x1.clear()
