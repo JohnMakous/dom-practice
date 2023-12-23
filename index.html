@@ -18,10 +18,11 @@
     <p id='output'></p>
  
     <py-script>
-    n = int(Element('input-number').value)
+    
     op = Element("output")
     
-    def my_function(n):
+    def my_function(*arg, **kwargs):
+        n = int(Element('input-number').value)
         op.write(n)
       
     </py-script>
