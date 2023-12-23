@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <input type ="text" id="input-number" placeholder="input number"></input>
+    <input type ="text" id="x1" placeholder="x1"></input>
     <button id="submit-button" type="button" pys-onClick="my_function()">Submit</button>
 
     <br>
@@ -22,7 +22,7 @@
     op = Element("output")
     
     def my_function(*arg, **kwargs):
-        n1 = float(Element('input-number').value)
+        n1 = float(Element('x1').value)
         op.write(n1*n1)
       
     </py-script>
