@@ -11,16 +11,16 @@
 
     <textarea name="input-number" id="input-number" placeholder="input number"></textarea>
     
-    <button id="submit-button" type="button" py-click="my_function()">OK</button>
+    <button id="submit-button" type="button" pys-onClick="my_function()">OK</button>
     <div id="test-output"></div>
  
     <p>Output:</p>
     <p id='output'></p>
  
     <py-script>
-    op = Element("output")
-    def my_function():
       n = int(Element('input-number').value)
+      op = Element("output")
+    def my_function(n):
       op.write(n)
       
     </py-script>
