@@ -12,6 +12,7 @@
       <label for="input-number">First name:</label><br>
       <input type="text" id="x1" name="x1" placeholder="x1"><br>
       <input type="text" id="x2" name="x2" placeholder="x2">
+      <button id="submit-button" type="button" value="Submit" pys-onClick="my_function()">Submit</button>
     </form>
     <button id="submit-button" type="button" value="Submit" pys-onClick="my_function()">Submit</button>
 
@@ -28,8 +29,9 @@
     op = Element("output")
     
     def my_function(*arg, **kwargs):
-        numb = float(Element('x1').value)
-        squarenumb = numb*numb
+        n1 = float(Element('x1').value)
+        n2 = float(Element('x2').value)
+        sum12 = n1+n2
         op.write(squarenumb)
       
     </py-script>
