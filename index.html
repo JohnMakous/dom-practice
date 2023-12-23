@@ -14,14 +14,13 @@
         <button id="convert" type="submit"  class="btn btn-info" pys-onClick="square">Input number</button>
       </div>
    
-    </py-script>
-
-    from js import document
-    def square(*ags, **kws):
-        x1 = document.getElementById('x1').value;
-        floatx1= float(x1)
-        result = floatx1*floatx1
-        print("number squared = ", result)
+    <py-script>
+      from js import document
+      def square(*ags, **kws):
+          x1 = document.getElementById('x1').value;
+          floatx1= float(x1)
+          result = floatx1*floatx1
+          print("number squared = ", result)
     </py-script>    
       
   </body>
