@@ -9,14 +9,13 @@
 
   <body>
       <input type="text" id="x1" name="x1" placeholder="x1"><br>
-      <input type="text" id="x2" name="x2" placeholder="x2">
+      <input type="text" id="x2" name="x2" placeholder="x2"><br>
       <button id="submit-button" type="button" pys-onClick="my_function()">Submit</button>
 
     <! -- <input type ="text" id="input-number" placeholder="input number"></input>  -->
     <! -- <button id="submit-button" type="button" pys-onClick="my_function()">Submit</button>  -->
 
-    <div id="test-output"></div>
- 
+    <br>
     <p>Output:</p>
     <br>
     <p id='output'></p>
@@ -29,6 +28,7 @@
         n1 = float(Element('x1').value)
         n2 = float(Element('x2').value)
         sum12 = n1+n2
+        print("The sum is ", sum12)
         op.write(sum12)
       
     </py-script>
