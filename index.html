@@ -9,43 +9,22 @@
   </head>
 
   <body>
-    <h1>Learn DOM Manipulation Using Pyscript</h1>
-    <h2>Simple String Counter Using Python</h2>
-    
-    <br>
+    welcome to madlibs!<br>
+    please do not put any spaces in your answers'<br><br><br><br>
+    <button id="button">Input</button>
+    name = <span id="span"></span>
+    <py-script>
+      import js
+      from pyodide.ffi import create_proxy
+  
+      def input_name(event):
+        name = input()
+        js.document.getElementById("span").innerText = name
+  
+      proxy = create_proxy(input_name)
+      js.document.getElementById("button").addEventListener("click", proxy)
+    </py-script>
+  </body>
+  
 
-    <p>Input text below.</p>
-
-    <input type="text" id="x1" name="x1" placeholder="x1">
-
-    <br>
-
-    <button id="run" type="button" class="button is-primary" pys-onClick="count" >Count</button>
-    <button id="clear" type="button" class="button is-danger" pys-onClick="clear" >Clear</button>
-
-    <br>
-
-    <p>Output from Python</p>
-
-    <p id ="output"></p>
-
-  </body>     
-
-  <py-script>
-
-    x1 = Element("x1").value
-    op = Element("output")
-
-    num1 = float(x1)
-    a = float(num1)*float(num1)
-
-    print(a)
-
-    def clear(*args, **kwargs):
-        x1.clear()
-
-    def count(*args, **kwargs):
-        number = len(x1.value)
-        op.write(number)
-
-  </py-script>
+  
