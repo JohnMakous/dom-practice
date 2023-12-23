@@ -26,6 +26,7 @@
     op = Element("output")
     
     def my_function(*arg, **kwargs):
+        print(Element('x1').value)
         n1 = float(Element('x1').value)
         n2 = float(Element('x2').value)
         sum12 = n1+n2
