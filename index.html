@@ -9,21 +9,20 @@
   </head>
 
   <body>
-    welcome to madlibs!<br>
-    please do not put any spaces in your answers'<br><br><br><br>
-    <button id="button">Input</button>
-    name = <span id="span"></span>
+      <p id="para">Some text here</p>
+      <button onclick="changeColor('blue');">blue</button>
+      <button onclick="changeColor('red');">red</button>
+
     <py-script>
-      import js
-      from pyodide.ffi import create_proxy
-  
-      def input_name(event):
-        name = input()
-        js.document.getElementById("span").innerText = name
-  
-      proxy = create_proxy(input_name)
-      js.document.getElementById("button").addEventListener("click", proxy)
+      name = input()
+      js.document.getElementById("span").innerText = name
+
+      def changeColor(newColor):
+          elem = document.getElementById("para")
+          elem.style.color = newColor;
+      
     </py-script>
+      
   </body>
   
 
