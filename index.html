@@ -9,21 +9,21 @@
 
   <body>
 
-      <div>
-        <input id="x1" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Temp in Celsius" /></p>
-        <button id="convert" type="submit"  class="btn btn-info" pys-onClick="square">Input number</button>
-      </div>
-   
-    <py-script>
+     
+        <input id="x1" type="text" />
+        <button id="convert" type="submit" pys-onClick="square">Input number</button>
+        <div id="testoutput"></div>
+
+        <py-script output = "testoutput">
       from js import document
-      x2=input("input x")
+      x2=document.getElementById('x1').value
       floatx= float(x2)
       print(square(floatx))
-      def square():
-          #x1 = document.getElementById('x1').value;
-          return = floatx+1
+      def square(x):
+          #x1 = 
+          return = x+1
           #print("number squared = ", result)
-    </py-script>    
+        </py-script>    
       
   </body>
   
