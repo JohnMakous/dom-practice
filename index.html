@@ -9,21 +9,27 @@
 
   <body>
 
-     
-        <input id="x1" type="text" />
-        <button id="convert" type="submit" pys-onClick="square">Input number</button>
-        <div id="testoutput"></div>
-
-        <py-script output = "testoutput">
-      from js import document
-      x2=document.getElementById('x2').value
-      floatx= float(x2)
-      print(square(floatx))
-      def square(x):
-          #x1 = 
-          return x+1
-          #print("number squared = ", result)
-        </py-script>    
+    <input type="number" id="n"/>
+    <button id="submit-button" type="button" py-click="my_function()">OK</button>
+    <div id="test-output"></div>
+ 
+    <p>Output:</p>
+    <p id='output'></p>
+ 
+    <py-config>
+      packages = ["numpy"]
+    </py-config>
+ 
+    <py-script>
+    import numpy as np
+    from pyscript import Element
+ 
+    def my_function():
+      n = int(Element('n').value)
+      return n+2
+      
+    </py-script>
+  </body>    
       
   </body>
   
