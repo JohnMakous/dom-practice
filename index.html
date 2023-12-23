@@ -9,7 +9,8 @@
 
   <body>
 
-    <input type="number" id="n"/>
+    <textarea name="input-number" id="input-number" placeholder="input number"></textarea>
+    
     <button id="submit-button" type="button" py-click="my_function()">OK</button>
     <div id="test-output"></div>
  
@@ -17,10 +18,10 @@
     <p id='output'></p>
  
     <py-script>
- 
+    op = Element("output")
     def my_function():
-      n = int(Element('n').value)
-      return n+2
+      n = int(Element('input-number').value)
+      op.write(n)
       
     </py-script>
   </body>    
